@@ -4,7 +4,7 @@ import cors from 'cors';
 
 import { config } from 'dotenv'
 import pg from 'pg'
-import questions from './questions.js';
+import questions from './src/questions.js';
 
 config()
 
