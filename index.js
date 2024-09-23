@@ -42,8 +42,15 @@ const app = express()
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/correct_answers', async (req, res) => {
-  res.json(correctAnswers)
+app.get('/my_answers/:id', async (req, res) => {
+  const { id } = req.params
+
+  try {
+    const myAnswers = await pool.query('SELECT * FROM users_questions WHERE user_id = $1', [id])
+    res.json(myAnswers.rows.sort((a, b) => a.question_id - b.question_id))
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
 })
 
 app.get('/questions', async (req, res) => {
@@ -90,7 +97,7 @@ app.post('/create_answer', async (req, res) => {
 
     await pool.query(`INSERT INTO users_questions (user_id, question_id, answer) VALUES ($1, $2, $3) RETURNING *`, [user_id, question_id, answer])
 
-    res.json(selectUser.rows[0], { correctAnswer }, { correctAnswers })
+    res.json(selectUser.rows[0])
   } catch (error) {
     res.status(500).json({ error: error.message })
   }
