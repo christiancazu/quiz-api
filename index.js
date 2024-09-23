@@ -20,6 +20,10 @@ const app = express()
 app.use(bodyParser.json())
 app.use(cors())
 
+app.get('/correct_answers', async (req, res) => {
+  res.json(correctAnswers)
+})
+
 app.get('/questions', async (req, res) => {
   res.json(questions)
 })
