@@ -62,13 +62,13 @@ app.post('/create_answer', async (req, res) => {
       if (delay > 0) {
         newDelay = delay
       }
- 
+
       selectUser = await pool.query('UPDATE users SET score = $1 WHERE id = $2 RETURNING *', [score + ANSWER_SCORE + newDelay, user_id])
     }
 
     await pool.query(`INSERT INTO users_questions (user_id, question_id, answer) VALUES ($1, $2, $3) RETURNING *`, [user_id, question_id, answer])
 
-    res.json(selectUser.rows[0], { correctAnswer }, {correctAnswers})
+    res.json(selectUser.rows[0], { correctAnswer }, { correctAnswers })
   } catch (error) {
     res.status(500).json({ error: error.message })
   }
@@ -90,6 +90,27 @@ app.post('/create_user', async (req, res) => {
 })
 
 app.listen(process.env.PORT || 3000, async () => {
-  const result = await pool.query('SELECT * FROM questions')
-  correctAnswers = result.rows
+  // const result = await pool.query('SELECT * FROM questions')
+  correctAnswers = [
+    {
+      "id": 1,
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "correct_answer": "c"
+    },
+    {
+      "id": 3,
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "correct_answer": "d"
+    },
+    {
+      "id": 5,
+      "correct_answer": "b"
+    }
+  ]
 })
