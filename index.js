@@ -64,7 +64,7 @@ app.post('/create_answer', async (req, res) => {
 
     await pool.query(`INSERT INTO users_questions (user_id, question_id, answer) VALUES ($1, $2, $3) RETURNING *`, [user_id, question_id, answer])
 
-    res.json(selectUser.rows[0])
+    res.json(selectUser.rows[0], { correctAnswer }, {correctAnswers})
   } catch (error) {
     res.status(500).json({ error: error.message })
   }

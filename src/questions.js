@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    question: '¿En qué rama de la psicologia está enfocada la teoría de convariación de Harold Kelley?',
+    question: '¿En qué rama de la psicología está enfocada la teoría de convariación de Harold Kelley?',
     answers: {
       a: 'La atención, la emoción y la conducta.',
       b: 'La consistencia, distintividad y concenso.',
