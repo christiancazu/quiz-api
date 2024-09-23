@@ -13,7 +13,29 @@ const pool = new pg.Pool({
   ssl: true
 })
 
-let correctAnswers = []
+let correctAnswers = [
+  {
+    "id": 1,
+    "correct_answer": "b"
+  },
+  {
+    "id": 2,
+    "correct_answer": "c"
+  },
+  {
+    "id": 3,
+    "correct_answer": "a"
+  },
+  {
+    "id": 4,
+    "correct_answer": "d"
+  },
+  {
+    "id": 5,
+    "correct_answer": "b"
+  }
+]
+
 const ANSWER_SCORE = 1000
 
 const app = express()
@@ -91,26 +113,4 @@ app.post('/create_user', async (req, res) => {
 
 app.listen(process.env.PORT || 3000, async () => {
   // const result = await pool.query('SELECT * FROM questions')
-  correctAnswers = [
-    {
-      "id": 1,
-      "correct_answer": "b"
-    },
-    {
-      "id": 2,
-      "correct_answer": "c"
-    },
-    {
-      "id": 3,
-      "correct_answer": "a"
-    },
-    {
-      "id": 4,
-      "correct_answer": "d"
-    },
-    {
-      "id": 5,
-      "correct_answer": "b"
-    }
-  ]
 })
