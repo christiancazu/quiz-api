@@ -1,42 +1,42 @@
 export default [
   {
     id: 1,
-    question: '¿Qué significa que un comportamiento tenga alto consenso?',
+    question: '¿En qué rama de la psicologia está enfocada la teoría de convariación de Harold Kelley?',
     answers: {
-      a: 'Significa que solo una persona responde de manera diferente ante una situación, lo que indica que su comportamiento es único y no está influenciado por el contexto.',
-      b: 'Significa que muchas personas responden de manera similar ante una situación, lo que sugiere que el comportamiento está influenciado por la situación.',
-      c: 'Significa que el comportamiento de una persona es el único que importa en esa situación, sin considerar lo que hacen los demás.',
-      d: 'Significa que el comportamiento es solo una opinión personal y no tiene relación con lo que hacen los demás.',
+      a: 'La atención, la emoción y la conducta.',
+      b: 'La consistencia, distintividad y concenso.',
+      c: 'La cognición, la persepción y la memoria.',
+      d: 'La herencia, el ambiente y la motivación.',
     }
   },
   {
     id: 2,
     question: '¿En qué año nació Harold kelley?',
     answers: {
-      a: '1921',
+      a: '1940',
       b: '1935',
-      c: '1940',
+      c: '1921',
       d: '1952',
     }
   },
   {
     id: 3,
-    question: 'Quién fue Harold kelley?',
+    question: 'Los factores en la convariación según Kelley son 3:',
     answers: {
-      a: 'Harold Kelley fue un filósofo famoso por sus teorías sobre la ética.',
-      b: 'Harold Kelley fue un economista que se centró en el desarrollo de modelos económicos.',
-      c: 'Harold Kelley fue un psicólogo social estadounidense conocido por su trabajo en la teoría de la atribución y el estudio de las dinámicas interpersonales.',
-      d: 'Harold Kelley fue un biólogo que realizó investigaciones sobre la genética.',
+      a: 'La persona, el estímulo y la situación.',
+      b: 'La frecuencia, la intensidad y la duración.',
+      c: 'La motivación, la persepción y la memoria.',
+      d: 'El aprendizaje, la herencia y la adaptación.'
     }
   },
   {
     id: 4,
-    question: '¿Qué significa que la distintividad sea alta en un comportamiento?',
+    question: '¿Cuáles son las 3 dimensiones de la teoría de covariación?',
     answers: {
-      a: 'Significa que el comportamiento es el mismo en muchas situaciones diferentes, lo que indica características estables de la persona.',
-      b: 'Significa que el comportamiento es irrelevante y no se puede asociar con ninguna situación específica.',
-      c: 'Significa que el comportamiento es variable y cambia constantemente sin importar el contexto.',
-      d: 'Significa que el comportamiento es específico de una situación particular y no se presenta en muchas otras situaciones, sugiriendo que está influenciado por factores situacionales.',
+      a: 'La atención, la emoción y la conducta.',
+      b: 'La cognición, lapersección y la memoria.',
+      c: 'La herencia, el ambiente y la motivación.',
+      d: 'La consistencia, la distintividad y el concenso.',
     }
   },
   {
